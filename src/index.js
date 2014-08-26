@@ -1,3 +1,3 @@
 (function () {
-    angular.module('directives.app', ['ngRoute','ngMessages']);
+    angular.module('directives.app', ['ngRoute','ngMessages','ngAnimate']);
 }());

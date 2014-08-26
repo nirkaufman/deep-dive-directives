@@ -4,7 +4,13 @@
      * @constructor
      */
     function DatabindingController() {
+
         this.someData = {data: ''};
+
+        this.options = {
+//            updateOn: 'blur',
+//            debounce: 1000
+        };
 
         this.changeModelFromScope = function () {
             this.someData.data = "Other Data"

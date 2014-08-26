@@ -1,3 +1,33 @@
-p {
-    /* test */
+/* list style
+-------------------------------*/
+.task-list{
+    padding: 15px;
+    border: 1px solid #000000;
+}
+
+.task-list:nth-child(odd) {
+    background-color: #e8e8e8;
+}
+
+.task-list.ng-move {
+    -webkit-animation: tada 2s ;
+}
+
+.task-list.ng-leave {
+    -webkit-animation: hinge 2s ;
+}
+
+.task-list.ng-enter {
+    -webkit-animation: lightSpeedIn 1s ;
+}
+
+/* panel style
+-------------------------------*/
+
+.panel.nk-add{
+    -webkit-animation: rubberBand 1s ;
+}
+
+.panel.nk-remove{
+    -webkit-animation: shake 1s ;
 }

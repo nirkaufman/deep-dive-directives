@@ -4,22 +4,43 @@
         <h1>Controlling Data Binding</h1>
     </div>
 
-    <div class="lead">
-        <p>The ngModel Controller expose a rich API that enable us to take control on data binding.</p>
-    </div>
-    <form class="form-inline">
 
-        <div class="form-group">
-            <input type="text"
-                   custom-db
-                   ng-model="databinding.someData.data"
-                   class="form-control" placeholder="enter some text..."/>
+    <div class="row">
+
+        <div class="lead">
+            <p>The ngModel Controller expose a rich API that enable us to take control on data binding.</p>
         </div>
 
-        <button ng-click="databinding.changeModelFromScope()" class="btn btn-primary">Change Model</button>
+        <div class="col-lg-3">
+            <input type="text"
+                   ng-model="temp.Model"
+                   ng-model-options="databinding.options"
+                   class="input-lg" placeholder="Data Here Please..."/>
+        </div>
 
-    </form>
-    <p class="lead">{{databinding.someData.data }}</p>
+        <div class="col-lg-6 text-left well">
+            <span class="lead">{{temp.Model}}</span>
+        </div>
+    </div>
 
 
+    <div class="row">
+        <div class="lead">
+            <p>we can interfere in the model-view syncing</p>
+        </div>
+
+        <form class="form-inline">
+            <div class="form-group">
+                <input type="text"
+                       custom-db
+                       ng-model="databinding.someData.data"
+                       class="form-control" placeholder="enter some text..."/>
+            </div>
+
+            <button ng-click="databinding.changeModelFromScope()" class="btn btn-primary">Change Model</button>
+
+        </form>
+        <p class="lead">{{databinding.someData.data }}</p>
+
+    </div>
 </div>
