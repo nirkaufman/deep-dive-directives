@@ -6,12 +6,19 @@
 
     <div class="lead">
         <p>The ngModel Controller expose a rich API that enable us to take control on data binding.</p>
-        <p>We have already  </p>
     </div>
+    <form class="form-inline">
 
-    <input type="text" custom-db ng-model="databinding.someData.data" class="input-lg" placeholder="enter some text..."/>
-    <button ng-click="databinding.changeModelFromScope()">Change Model</button>
+        <div class="form-group">
+            <input type="text"
+                   custom-db
+                   ng-model="databinding.someData.data"
+                   class="form-control" placeholder="enter some text..."/>
+        </div>
 
+        <button ng-click="databinding.changeModelFromScope()" class="btn btn-primary">Change Model</button>
+
+    </form>
     <p class="lead">{{databinding.someData.data }}</p>
 
 

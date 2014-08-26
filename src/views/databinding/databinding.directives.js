@@ -1,27 +1,34 @@
 (function () {
 
-    function DataBindingDirective () {
+    function DataBindingDirective (timeout) {
 
         return {
             require: 'ngModel',
             link: function (scope, element, attrs, model) {
 
+                // optional - every time the model changed
                 model.$render = function () {
-                    model.$setViewValue(model.$modelValue);
+                    element.val(model.$modelValue);
                 };
 
+                // when the view value changed
                 model.$parsers.push(function (input) {
-                    return input.toUpperCase()
+                    return 'bad' == input ? undefined : input.toUpperCase();
                 });
 
+                // when the model value changed
                 model.$formatters.push(function(input) {
-                    console.log(input)
+                    return input.split("").reverse().join("")
                 });
 
+                // lets roll back to the model value
+                element.on('click', function () {
+                    model.$rollbackViewValue();
+                });
             }
         }
     }
 
     angular.module('directives.app')
-        .directive('customDb',DataBindingDirective)
+        .directive('customDb',['$timeout',DataBindingDirective])
 }());

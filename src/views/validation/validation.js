@@ -1,6 +1,6 @@
 (function () {
 
-    function ValidationController() {
+    function ValidationController(scope) {
 
     }
 

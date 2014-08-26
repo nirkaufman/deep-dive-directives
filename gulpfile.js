@@ -14,7 +14,7 @@ gulp.task('build', ['css'], function () {
     gulp.src('src/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(concat('app.js'))
-        .pipe(uglify())
+//        .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('dist/'));
 });
