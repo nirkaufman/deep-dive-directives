@@ -1,0 +1,6 @@
+/* set padding to the body to compromise the fixed nav bar  */
+body {
+    padding: 40px 0;
+}
+
+textarea, input, button { outline: none;}

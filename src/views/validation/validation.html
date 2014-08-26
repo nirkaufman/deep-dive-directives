@@ -1,0 +1,106 @@
+<div class="container">
+
+    <div class="row page-header">
+        <h1>Built-in Validation</h1>
+    </div>
+
+    <!-- first section intro -->
+    <p class="row lead">
+        Every time we use the form directive, Angular instantiates the <a
+            href="https://docs.angularjs.org/api/ng/type/form.FormController" target="_blank">FormController</a>
+        and publish it on the current scope (we need to give our form a name for reference).
+    </p>
+
+    <div class="row">
+
+        <!-- form section -->
+        <section class="col-lg-6">
+            <h3>A simple form for example:</h3>
+
+            <form name="loginForm" novalidate>
+
+                <div class="form-group">
+                    <label>Username</label>
+                    <input name="userName" ng-minlength="3" required ng-model="userName" type="text"
+                           class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input name="password" type="password" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+        </section>
+
+        <!-- code section -->
+        <section class="col-lg-6">
+            <div class="well">
+                <pre><samp>{{loginForm.userName | json}}</samp></pre>
+            </div>
+        </section>
+
+    </div>
+    <!-- end row -->
+
+
+    <div class="row page-header">
+        <h1>Custom Validation</h1>
+    </div>
+
+    <p class="row lead">
+        by requiring the form directive in our custom directive, we can gain
+        access to this controller methods and properties.
+    </p>
+
+    <div class="row">
+
+        <section class="col-lg-6">
+            <form name="customForm" novalidate>
+
+                <div class="form-group">
+                    <label>Free text</label>
+                    <input custom-validation="nir" ng-model='aName' name='nameInput' type="text" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label>User name</label>
+                    <input unique-user-name ng-model='userInput' ng-minlength="2" name='userInput' required type="text"
+                           class="form-control">
+                    <div ng-messages="customForm.userInput.$error" class="text-danger">
+                        <div ng-message="required" >You did not enter a field</div>
+                        <div ng-message="minlength">Must be at least 2 chars!</div>
+                        <div ng-message="unique">Name already exist!</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button ng-disabled="customForm.$invalid" class="btn btn-primary form-control">send</button>
+                </div>
+
+
+
+            </form>
+        </section>
+
+        <section class="col-lg-6">
+
+            <div class="well">
+                <pre><samp>{{ customForm.nameInput.$error | json }}</samp></pre>
+            </div>
+
+            <div class="well">
+                <pre><samp>{{ customForm.userInput.$error | json }}</samp></pre>
+            </div>
+
+
+        </section>
+
+
+    </div>
+    <!-- end row -->
+
+
+</div><!-- ./container -->
