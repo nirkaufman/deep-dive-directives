@@ -90,13 +90,17 @@
         }
     }
 
+    /**
+     * repeat the element by an input amount
+     * @returns {{transclude: string, scope: {amount: string}, link: link}}
+     * @constructor
+     */
     function DuplicatorDirective() {
         return {
             transclude: 'element',
             scope: {
                 amount: '=times'
             },
-
 
             link: function (scope, element, attrs, ctrl, transclude) {
 
@@ -113,8 +117,6 @@
                         previous = clone;
                     });
                 }
-
-
             }
         }
     }

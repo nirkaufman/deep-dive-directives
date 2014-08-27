@@ -3,10 +3,9 @@
     function PlaygroundDirective () {
 
         function PlaygroundDirectiveController () {
-            this.printMsg = function (msg) {
-                console.log(msg)
-            }
-
+//            this.printMsg = function (msg) {
+//                console.log(msg)
+//            }
         }
 
         return {

@@ -4,8 +4,7 @@
   "description": "reference code for the advanced directives development workshop",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
-    "server": "node server/server.js"
+    "start": "node server/server.js"
   },
   "keywords": [
     "angularjs"

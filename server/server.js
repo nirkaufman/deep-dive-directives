@@ -5,5 +5,5 @@ server.low.db = {
 };
 
 server.listen(3000, function () {
-    console.log('======= > API server  listen on port 3000');
+    console.log('=======> API server listen on port 3000');
 });
