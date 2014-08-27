@@ -36,13 +36,14 @@ describe('Unit: Directives', function () {
 
         scope = $rootScope;
         element = angular.element('<div collection="model"></div>');
-        service = $injector.get('DirectiveLogic');
+        collectionFactory = $injector.get('DirectiveLogic');
 
         $compile(element)(scope);
         scope.$apply();
     }));
 
     it('should be true', function () {
+        console.log(element);
         expect(true).toBe(true);
     })
 });

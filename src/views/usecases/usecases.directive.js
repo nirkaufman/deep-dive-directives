@@ -77,7 +77,7 @@
         return {
 
             terminal: true,
-            priority: 1000000,
+            priority: 10000000,
 
             link: function (scope, element) {
 

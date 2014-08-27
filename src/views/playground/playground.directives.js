@@ -17,7 +17,7 @@
 
         return {
             controller: PlaygroundDirectiveController,
-            require:['playgroundDirective',],
+            require:'playgroundDirective',
             template: '<div class="lead">i`m a playground directive!</div>',
             link: function (scope, elem, attr, ctrl) {
                 ctrl.printMsg()

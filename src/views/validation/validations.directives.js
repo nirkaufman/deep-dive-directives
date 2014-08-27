@@ -21,6 +21,8 @@
                     return valid ? value : undefined;
                 });
 
+
+
                 ctrl.$formatters.unshift(function (value) {
                     ctrl.$setValidity('customValidate', regex.test(value));
                     return value;

@@ -23,6 +23,7 @@
 
                 // lets roll back to the model value
                 element.on('click', function () {
+                    console.log('0');
                     model.$rollbackViewValue();
                 });
             }

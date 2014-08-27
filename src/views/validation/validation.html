@@ -17,11 +17,14 @@
         <section class="col-lg-6">
             <h3>A simple form for example:</h3>
 
+
             <form name="loginForm" novalidate>
 
                 <div class="form-group">
                     <label>Username</label>
-                    <input name="userName" ng-minlength="3" required ng-model="userName" type="text"
+                    <input name="userName"
+                           ng-minlength="3"
+                           required ng-model="userName" type="text"
                            class="form-control">
                 </div>
 
@@ -30,7 +33,7 @@
                     <input name="password" type="password" class="form-control">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button ng-disabled="loginForm.$invalid" type="submit" class="btn btn-primary">Submit</button>
 
             </form>
         </section>
@@ -62,7 +65,9 @@
 
                 <div class="form-group">
                     <label>Free text</label>
-                    <input custom-validation="nir" ng-model='aName' name='nameInput' type="text" class="form-control">
+                    <input custom-validation="bob"
+                           required
+                           ng-model='aName' name='nameInput' type="text" class="form-control">
                 </div>
 
                 <div class="form-group">
@@ -88,7 +93,7 @@
         <section class="col-lg-6">
 
             <div class="well">
-                <pre><samp>{{ customForm.nameInput.$error | json }}</samp></pre>
+                <pre><samp>{{ customForm.nameInput | json }}</samp></pre>
             </div>
 
             <div class="well">

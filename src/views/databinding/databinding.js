@@ -8,8 +8,8 @@
         this.someData = {data: ''};
 
         this.options = {
-//            updateOn: 'blur',
-//            debounce: 1000
+            updateOn: 'blur',
+            debounce: 1000
         };
 
         this.changeModelFromScope = function () {
