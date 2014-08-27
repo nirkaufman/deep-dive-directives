@@ -58,7 +58,6 @@
                 controllerAs: 'playground'
             })
 
-
             .otherwise({
                 redirectTo: '/welcome'
             })

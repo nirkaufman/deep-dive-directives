@@ -1,5 +1,10 @@
 (function () {
-
+    /**
+     * simple panel
+     * @param animate
+     * @returns {{restrict: string, scope: {heading: string, content: string}, templateUrl: string, link: link}}
+     * @constructor
+     */
     function PanelDirective(animate) {
         return {
             restrict: 'E',

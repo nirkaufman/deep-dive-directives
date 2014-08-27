@@ -14,7 +14,7 @@
 }
 
 .task-list.ng-leave {
-    -webkit-animation: hinge 2s ;
+    -webkit-animation: rotateOutUpRight 2s ;
 }
 
 .task-list.ng-enter {
