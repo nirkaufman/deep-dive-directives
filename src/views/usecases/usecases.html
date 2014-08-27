@@ -1,0 +1,32 @@
+<div class="container">
+
+    <div class="page-header">
+        <h1>Usecases Page</h1>
+    </div>
+
+    <div class="col-lg-3">
+        <div collection="usecases.data"></div>
+    </div>
+
+    <div class="col-lg-3">
+        <h3>Mini View</h3>
+        <a href="#/usecases/one">One</a>
+        <a href="#/usecases/two">Two</a>
+        <mini-view></mini-view>
+    </div>
+
+    <div class="col-lg-3">
+        <ul class="well" nk-debug>
+            <li ng-repeat="person in usecases.peoples">
+                {{person.lastName}}, {{person.firstName}}
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-lg-3">
+        <input type="checkbox" ng-model="toggle"/>
+        <input type="text" placeholder="times.." ng-model="times"/>
+        <p ng-if="toggle" duplicate times="times">Duplicate Me!</p>
+    </div>
+
+</div>

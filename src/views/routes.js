@@ -33,18 +33,30 @@
                 controllerAs: 'animations'
             })
 
-            .when('/transclude', {
-                templateUrl: 'views/transclude/transclude.html',
-                controller: 'TranscludeController',
-                controllerAs: 'transclude'
+            .when('/testing', {
+                templateUrl: 'views/testing/testing.html',
+                controller: 'TestingController',
+                controllerAs: 'testing'
             })
+
+            .when('/usecases', {
+                templateUrl: 'views/usecases/usecases.html',
+                controller: 'UsecasesController',
+                controllerAs: 'usecases'
+            })
+
+            .when('/usecases/:subview', {
+                templateUrl: 'views/usecases/usecases.html',
+                controller: 'UsecasesController',
+                controllerAs: 'usecases'
+            })
+
 
             .when('/playground', {
                 templateUrl: 'views/playground/playground.html',
                 controller: 'PlaygroundController',
                 controllerAs: 'playground'
             })
-
 
 
             .otherwise({
